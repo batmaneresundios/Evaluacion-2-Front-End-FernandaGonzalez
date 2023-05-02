@@ -1,3 +1,4 @@
+<!--Landing page Fernanda Gonzalez Rojas AP-171-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,39 +6,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cooperativa Productos Araucania</title>
+    <!--Script para llamar a bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>        
 <link rel="stylesheet" href="estilos/estilo.css">
+<!--Script para iconos de redes sociales-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
+
+
   <body>
-    <!--Contenedor aviso-->
-    <div class="contenedor-img">
-      Despacho gratis por compras sobre $25.000 en la IX Región
+    <!--Contenedor aviso-->    
+    <div class="contenedor-despachos">
+      Despacho gratis por compras sobre $25.000 en la IX Región. 
+<!-- Boton para modal -->
+  <button type="button" class="btn-personalizado" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <a>Click acá para valores de envío para todas las regiones</a>
+  </button>
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Valores para las regiones de Chile:</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Región de Arica y Parinacota: Desde $7.100 CLP</p>
+          <p>Región de Tarapacá: Desde $6.800 CLP</p>
+          <p>Región de Antofagasta: Desde $7.400 CLP</p>
+          <p>Región de Atacama: Desde $7.700 CLP</p>
+          <p>Región de Coquimbo: Desde $6.900</p>
+          <p>Región de Valparaíso: Desde $6.100</p>
+          <p>Región Metropolitana: Desde $5.500 CLP</p>
+          <p>Región del Libertador General Bernardo O'Higgins: Desde $6.200 CLP</p>
+          <p>Región del Maule: Desde $6.500 CLP</p>
+          <p>Región del Ñuble: Desde $6.600 CLP</p>
+          <p>Región del Biobío: Desde $5.800 CLP</p>
+          <p>Región de La Araucanía: Desde $5.800 CLP (Compras sobre $25.000 tiene envío gratis)</p>
+          <p>Región de Los Ríos: Desde $6.800 CLP</p>
+          <p>Región de Los Lagos: Desde $6.600 CLP</p>
+          <p>Región de Aysén del General Carlos Ibáñez del Campo: Desde $11.600 CLP</p>
+          <p>Región de Magallanes y de la Antártica Chilena: Desde $12.800 CLP</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar ventana</button>
+        </div>
+      </div>
     </div>
+  </div>
+  </div> 
+
   <!--Navbar-->
-  <nav class="navbar navbar-expand-md navbar-light bg-light border-3 border-bottom border-success">
+  <nav class="navbar navbar-expand-md navbar-white bg-white border-3 border-bottom border-success">
     <a class="navbar-brand" href="#"></a>
-      <img src="img/vaca_logo.jfif" width="20px">
+      <img src="img/Lacteos_araucania1.png" width="100px">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-3">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Sobre Nosotros</a>
+          <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Noticias</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#">Sobre Nosotros</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#">Nuestros Productos</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Preguntas frecuentes</a>
+        </li>
       </ul>
+      <!--Busqueda en web-->
+      <div class="input-group">
+        <div class="form-outline">          
+          <input id="search-input" type="search" id="form1" class="form-control" placeholder="Búsqueda"/>       
+        </div>
+        <button id="search-button" type="button" class="btn btn-primary">          
+        </button>
+      </div>    
     </div>
-  </nav> 
+  </nav>
+  <!--Alerta sitio en mantecion-->
+  <div class="alert alert-danger d-flex align-items-center alert-dismissible fade show" role="alert">
+    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+    <strong>Nuestro sitio estará en manteción el martes 02 de Mayo desde las 23:59 hasta las 03:00 AM. Adelanta tus compras!</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>    
+  </div>  
+  
   <!--Carrusel elegido-->
   <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
@@ -70,90 +132,154 @@
       <span class="visually-hidden">Siguiente</span>
     </button>
   </div> 
-  <!--Margen bajo carrusel-->
-  <div class="margen"></div>
-  <div id="quienes-somos">
-    <h1> Quienes Somos </h1>
-    <p>Somos Productores Lecheros de La Araucanía, una asociación de más de 50 productores
-      comprometidos con la calidad y el bienestar animal en la producción de leche. Trabajamos con transparencia
-      y ética para garantizar la calidad de nuestra leche y contribuir a la economía local.
-      Nuestros miembros se esfuerzan por producir leche de alta calidad a través de la implementación de prácticas 
-      sostenibles y la adopción de tecnologías avanzadas de producción. Además, nos esforzamos por apoyar a nuestros
-      miembros con recursos y capacitación para mejorar continuamente sus prácticas de producción y mantenerse actualizados 
-      sobre las últimas tendencias y mejores prácticas.</p>
 
-  </div> 
-  
-  <!--Grilla con tres cards-->
+  <!--Margen bajo carrusel-->  
   <div class="container text-center">
     <div class="row">
-      <div class="col">
-        <div class="card" style="width: 18rem;">
-          <img src="img/Quesos.png" class="card-img-top" alt="">
-          <div class="card-body">
-            <h5 class="card-title">Quesos 5 kg</h5>
-            <p class="card-text">Quesos provenientes de productores de la comuna de Pitrufquen.</p>
-            <p>$5990kg</p><h5>Ingrese cantidad</h5>  
-            <!--Cuadro de texto para ingreso de cantidades-->
-            <input type="text" id="input" name="...">
-            <a href="#" class="btn btn-success">Añadir al carrito</a>
-          </div>
-        </div>
+      <div class="col" >
+        <img src="img/logo_cooperativa_1.png" style="width: 600px;">
       </div>
       <div class="col">
-        <div class="card" style="width: 18rem;">
-          <img src="img/Receta-de-queso-fresco-casero.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Quesillo fresco 3 kg</h5>
-            <p class="card-text">Quesillos frescos provenientes de la comuna de Angol.</p>
-            <p>$4990kg</p><h5>Ingrese cantidad</h5>
-            <input type="text" id="input" name="...">
-            <a href="#" class="btn btn-success">Añadir al carrito</a>
+        <h2>¿Quienes Somos?</h2>        
+        <div id="quienes-somos"><p>Somos Productores Lecheros de La Araucanía, una asociación de más de 50 productores de
+           leche que trabajan juntos para promover prácticas sostenibles de producción lechera y
+            garantizar la calidad de la leche que llega a los consumidores. Fundada en 1995, nuestra 
+            organización está comprometida con el bienestar animal y la producción ética de leche de alta calidad.</p>
+            <img src="img/Lacteos_araucania1.png" style="width: 300px;">
+          </div>
+      </div>    
+
+    </div>
+  </div>
+
+  <!--Contenedor con cards para productos-->
+  <div id="productos">
+    <a id="nuestros-productos" href="#">Nuestros productos</a>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width:10px 18rem;">
+            <img src="img/Quesos.png" class="card-img-top" alt="Imagen de queso sobre tabla">
+            <!--Borde verde bajo imagenes en cards-->
+            <span class="border border-success"></span>
+            <div class="card-body">
+              <h5 class="card-title">Quesos 5 kg</h5>
+              <p class="card-text">Quesos provenientes de productores de la comuna de Pitrufquen.</p>
+              <p>$5990kg</p><h5>Ingrese cantidad</h5>  
+              <!--Cuadro de texto para ingreso de cantidades-->
+              <input type="text" id="input" name="...">
+              <button type="button" class="btn btn-success">Añadir al carrito</button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 18rem;">
-          <img src="img/leche_1.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Leche de vaca</h5>
-            <p class="card-text">Leche de vaca cruda, sin procesar, proveniente de la comuna de Toltén.</p>
-            <p>$3990lt</p><h5>Ingrese cantidad</h5>
-            <input type="text" id="input" name="...">
-            <a href="#" class="btn btn-success">Añadir al carrito</a>
+        <div class="col">
+          <div class="card" style="width:30px 18rem;">
+            <img src="img/Receta-de-queso-fresco-casero.jpg" class="card-img-top" alt="Imagen de queso fresco">
+            <span class="border border-success"></span>
+            <div class="card-body">
+              <h5 class="card-title">Quesillo fresco 3 kg</h5>
+              <p class="card-text">Quesillos frescos provenientes de la comuna de Angol.</p>
+              <p>$4990kg</p><h5>Ingrese cantidad</h5>
+              <input type="text" id="input" name="...">
+              <button type="button" class="btn btn-success">Añadir al carrito</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width:30px 18rem;">          
+            <img src="img/leche_1.jpg" class="card-img-top" alt="Imagen de vaso con leche">
+            <span class="border border-success"></span>
+            <div class="card-body">
+              
+              <h5 class="card-title">Leche de vaca</h5>
+              <p class="card-text">Leche de vaca cruda, sin procesar, proveniente de la comuna de Toltén.</p>
+              <p>$3990lt</p><h5>Ingrese cantidad</h5>
+              <input type="text" id="input" name="...">
+              <button type="button" class="btn btn-success">Añadir al carrito</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!--Grilla para formulario-->
-  <div class="container text-center">
-    <div class="row">
-      <div class="col">
-        <!--No sé si poner algo xD-->
-      </div>
-      <div class="col">
-        <!--No sé si poner algo xD-->
-      </div>
-      <div class="col">
-        <!--No sé si poner algo xD-->
-      </div>
+ 
+<!--Acordeon preguntas frecuentes y formulario incluido-->
+<div class="faq">
+  <a class="preguntas-frecuentes" href="#">Preguntas frecuentes</a>
+</div>
+
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        ¿Hacen envíos a otras regiones que no sean la Araucanía?
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Sí, hacemos envíos a todo Chile, los envíos los realizamos los días Lunes y Miércoles a través de Starken. </div>
     </div>
   </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        ¿Sus productos contienen preservantes?
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Nuestros productos están hechos a base de ingredientes 100% naturales, por lo cual no utilizamos preservantes ni ningún ingrediente de procedencia artificial.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        ¿Tienen tienda fisica?
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Sí, tenemos tienda física en la comuna de Temuco, nos pueden encontrar en el Centro Mercado Modelo, frente el Mercado Municipal de Temuco. La dirección es Gral. Aldunate 341, Temuco. 
+        Además realizamos permanentemente giras por ferias de la región ofreciendo nuestros productos.</div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+          ¿Tienes otra duda? Escribenos:
+        </button>
+      </h2>
+      <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Ingresa tu nombre y apellido" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Ingresa tu correo electronico" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Ingresa tu consulta" aria-label="Username" aria-describedby="basic-addon1">
+            <button type="button" class="btn btn-success">Enviar</button>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
 <div class="container">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">
       <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
         <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
       </a>
-      <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+      <span class="mb-3 mb-md-0 text-muted">© 2023 Derechos Reservados</span>
     </div>
-
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-    </ul>
+    <div class="redes-sociales">
+        <a href=""><ion-icon class="facebook" name="logo-facebook"></ion-icon></a>
+        <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href=""><ion-icon name="logo-instagram"></ion-icon></a>  
+      </div>
+    
   </footer>
 </div>
 </body>
